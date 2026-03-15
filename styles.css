@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&display=swap');
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+    margin: 0; /* Устраняем внешние отступы по умолчанию */
+    padding: 0; /* Устраняем внутренние отступы по умолчанию */
+}
+
+/* Фоновое оформление */
+body {
+    background-color: #fafafa; 
+    font-family: 'Playfair Display', serif;
+}
+
+/* Основной блок с фотографией и текстом */
+.block1 {
+    background-color: #a7dbf0;
+    position: relative;     
+             
+    display: flex;         
+    justify-content: center;
+    align-items: center;   
+    overflow: hidden;      
+}
+
+/* Центрирование фотографии */
+.center-image {
+    object-fit: cover;      
+    width: 50%;           
+    height: 100%;          
+    border-radius: 8px;    
+    position: relative;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.first-name,
+.middle-word,
+.last-name {
+    display: block;
+    text-align: center;
+    font-size: 56px;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px black;
+}
+
+.first-name { margin-bottom: 5px; }
+.middle-word { margin-bottom: 20px; }
+.last-name {margin-bottom: 20px;}
+
+/* Заголовок с именами */
+.names {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    width: 30%; 
+    color: white;
+    letter-spacing: 2px;
+    line-height: 1;       
+    bottom: 0;
+    padding-bottom: 150px;
+    position: absolute;     
+    text-align: center;
+    z-index: 1;             
+    text-shadow: 2px 2px 3px black;
+}
+
+/* Текст приглашения */
+.invitation-text {
+    font-weight: 500;
+    font-size: 36px;
+    color: white;
+    text-transform: none;   
+    letter-spacing: 2px;
+    position: absolute;     
+    bottom: 100px;              
+    line-height: 1.2;
+    white-space: pre-wrap;  
+    text-shadow: 2px 2px 3px black;
+}
+
+/* Общий стиль для всех блоков */
+.block2 {
+    text-align: center;
+    padding: 60px 0; /* Устанавливаем небольшие вертикальные отступы */
+}
+
+/* Заголовки верхнего уровня */
+.uppercase-title {
+    font-weight: 500;                       /* Умеренная толщина, близко к оригиналу */
+    font-size: 56px;
+    letter-spacing: 2px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    line-height: 1.2;                      /* Немного уменьшим межстрочное расстояние */
+}
+
+/* Описание события */
+.event-details {
+    font-weight: 500;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Общий стиль для блока 3 */
+.block3 {
+    height: 700px;                
+    display: flex;                 /* Гибкость размещения */
+    flex-direction: column;        /* Столбец для последовательного расположения */
+    position: relative;            /* Необходим для размещения линий */
+}
+
+/* Верхняя декоративная линия */
+.block3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Нижняя декоративная линия */
+.block3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Контейнер для первых двух секций */
+.top-container {
+    display: flex;                /* Гибкость */
+    justify-content: center;      /* Центровка по горизонтали */
+    align-items: center;          /* Центровка по вертикали */
+    width: 100%;                 /* Занимает всю ширину */
+    max-width: 1200px;           /* Максимальная ширина */
+    margin: 50px auto;           /* Центровка контейнера */
+}
+
+/* Левая секция (текстовая) */
+.left-section {
+    flex: 1;                      /* Равномерное распределение ширины */
+    padding-right: 20px;          /* Небольшой отступ справа */
+    text-align: center;           /* Центровка текста */
+}
+
+/* Контейнер для текста (выравнивание по центру относительно изображения) */
+.left-section-text {
+    display: inline-block;        /* Преобразование в строчно-блочный элемент */
+    vertical-align: middle;       /* Вертикальное выравнивание */
+    max-width: 300px;            /* Ограничение ширины текста */
+}
+
+/* Заголовки левой секции */
+.left-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.left-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.left-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Правая секция (с изображением) */
+.right-section {
+    flex: 1;                      /* Равномерное распределение ширины */
+    text-align: center;           /* Центровка изображения */
+    padding-left: 20px;           /* Небольшой отступ слева */
+}
+
+.section-image {
+    max-width: 100%;             /* Пропорциональное масштабирование */
+    height: 500px;                /* Сохраняем пропорции */
+    vertical-align: middle;       /* Вертикальное выравнивание */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Добавлена легкая тень */
+}
+
+/* Нижняя секция (центрированная) */
+.bottom-section {
+    width: 100%;                  /* Занимает всю ширину */
+    text-align: center;           /* Центровка текста */
+    margin: 0 auto;               /* Центровка по горизонтали */
+    padding-top: 20px;           /* Уменьшен отступ сверху */
+}
+
+/* Текст нижней секции (добавлен перенос строки) */
+.bottom-section p {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;             /* Увеличенное межстрочное расстояние */
+}
+
+/* Общий стиль для блока 4 */
+.block4 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Верхняя декоративная линия */
+
+
+/* Нижняя декоративная линия */
+.block4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Контейнер для первых двух секций */
+.block4 .top-container {
+    display: flex;                /* Гибкость */
+    justify-content: center;      /* Центровка по горизонтали */
+    align-items: center;          /* Центровка по вертикали */
+    width: 100%;                 /* Занимает всю ширину */
+    max-width: 1200px;           /* Максимальная ширина */
+    margin: 0 auto;              /* Центровка контейнера */
+    margin-bottom: 40px;          /* Отступ снизу до нижней секции */
+}
+
+/* Левая секция (с фотографией) */
+.block4 .left-section {
+    flex: 1;                      /* Равномерное распределение ширины */
+    text-align: center;           /* Центровка изображения */
+    padding-right: 20px;          /* Небольшой отступ справа */
+}
+
+/* Правая секция (текстовая) */
+.block4 .right-section {
+    flex: 1;                      /* Равномерное распределение ширины */
+    padding-left: 20px;           /* Небольшой отступ слева */
+    text-align: center;           /* Центровка текста */
+}
+
+/* Заголовок правой секции */
+.block4 .right-section h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Текст правой секции */
+.block4 .right-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Нижняя секция (карта) */
+.block4 .bottom-section {
+    width: 100%;                  /* Занимает всю ширину */
+    text-align: center;           /* Центровка карты */
+    margin: 0 auto;               /* Центровка по горизонтали */
+}
+
+/* Карта (Google Maps Embed) */
+.block4 .bottom-section iframe {
+    width: 100%;                  /* Занимает всю ширину */
+    height: 400px;                /* Высота карты */
+    border: none;                 /* Без рамки */
+}
+
+/* Общий стиль для блока 5 */
+.block5 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Нижняя декоративная линия */
+.block5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Заголовок программы */
+.program-header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Подзаголовок программы */
+.program-subheader {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Сетка расписания */
+.schedule-grid {
+    display: flex;                /* Гибкость */
+    justify-content: center;      /* Центровка по горизонтали */
+    flex-wrap: wrap;              /* Перенос строк */
+    gap: 40px;                   /* Промежутки между элементами */
+}
+
+/* Элемент расписания */
+.schedule-item {
+    display: flex;                /* Гибкость */
+    flex-direction: column;        /* Столбец */
+    align-items: center;          /* Центровка по горизонтали */
+    text-align: center;           /* Центровка текста */
+    max-width: 200px;            /* Ограничение ширины */
+    position: relative; /* Для позиционирования линий */
+    padding-right: 40px; /* Отступ для линии */
+}
+
+/* Добавляем вертикальные линии между пунктами */
+.schedule-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    
+    right: -20px; /* Регулируй отступ */
+    width: 1px;
+    height: 150px; /* Длина линии */
+    background-color: #333; /* Цвет линии */
+}
+
+/* Иконки (можно заменить на реальные SVG или иконочные шрифты) */
+.icon {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Время мероприятия */
+.schedule-time {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Описание мероприятия */
+.schedule-event {
+    font-size: 18px;
+    color: #555;
+}
+
+.block6 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Нижняя декоративная линия */
+.block6::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Заголовок блока */
+.dress-code-header {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Основной текст блока */
+.dress-code-text {
+    font-size: 24px;
+    color: #555;
+    font-style: italic;           /* Курсив для выразительности */
+}
+
+/* Общий стиль для блока 7 */
+.block7 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Заголовок блока */
+.gift-header {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Основное описание */
+.gift-description {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;             /* Удобное чтение */
+    margin-bottom: 40px;           /* Отступ до фотографии */
+}
+
+/* Фотография */
+.gift-image {
+    max-width: 30%;              /* Пропорциональное масштабирование */
+    height: auto;                 /* Сохраняем пропорции */
+    margin-bottom: 40px;  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);   
+}
+
+/* Дополнительный текст */
+.gift-conclusion {
+    font-size: 20px;
+    color: #555;
+    font-style: italic;           /* Курсив для выразительности */
+}
+
+/* Общий стиль для блока 8 */
+.block8 {
+    background-color: #fafafa; 
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Орнаменты сверху и снизу */
+.ornament-top,
+.ornament-bottom {
+    display: flex;                /* Гибкость */
+    justify-content: center;      /* Центровка по горизонтали */
+    align-items: center;          /* Центровка по вертикали */
+    margin: 20px 0;              /* Отступы */
+}
+
+/* Горизонтальные линии */
+.line {
+
+    border-top: 1px  #ccc; /* Тонкая линия */
+    margin: 0 10px;              /* Отступы от ромба */
+    width: 40%;
+}
+
+/* Ромб в центре */
+.diamond {
+    font-size: 24px;              /* Размер ромба */
+    color: #ccc;                  /* Цвет ромба */
+}
+
+/* Центральный текст */
+.message {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;             /* Удобное чтение */
+    margin: 40px 0;              /* Отступы */
+}
+
+/* Общий стиль для блока 9 */
+.block9 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+}
+
+/* Нижняя декоративная линия */
+.block9::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Заголовок блока */
+.countdown-header {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Контейнер для фотографии и таймера */
+.countdown-container {
+    position: relative;            /* Для позиционирования таймера */
+    display: inline-block;         /* Центровка по горизонтали */
+}
+
+/* Фотография */
+.countdown-image {
+    max-width: 70%;              /* Пропорциональное масштабирование */
+    height: auto;                 /* Сохраняем пропорции */
+    display: block;                /* Блоковый элемент */
+    margin: 0 auto;               /* Центровка по горизонтали */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1); 
+}
+
+/* Таймер (расположение и оформление) */
+.countdown-timer {
+    position: absolute;            /* Абсолютное позиционирование */
+    bottom: 20px;                 /* Отступ снизу */
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка по горизонтали */
+    display: flex;                 /* Гибкость */
+    justify-content: center;      /* Центровка по горизонтали */
+    gap: 20px;                    /* Промежутки между элементами */
+    padding: 10px 20px;          /* Внутренние отступы */
+    border-radius: 8px;           /* Скругление углов */
+    font-size: 18px;              /* Размер шрифта */
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+/* Отдельный элемент таймера */
+.timer-item {
+    text-align: center;           /* Центровка текста */
+}
+
+/* Цифры таймера (увеличенный шрифт) */
+.timer-item span {
+    font-size: 55px;              /* Большие цифры */
+    font-weight: bold;            /* Жирный шрифт */
+    display: block;                /* Блочный элемент */
+}
+
+/* Подписи (дней, часов...) */
+.timer-item small {
+    font-size: 24px;              /* Размер подписей */
+    color: inherit;                /* Наследует цвет */
+}
+
+/* Общий стиль для блока 10 */
+.block10 {
+    background-color: #fafafa; 
+    padding: 50px 0;             /* Внутренние отступы */
+    text-align: center;           /* Центровка по горизонтали */
+    position: relative;            /* Для добавления декоративных линий */
+    margin-bottom: 50px;
+}
+
+/* Нижняя декоративная линия */
+.block10::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+/* Заголовок блока */
+.guest-form-header {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Введение */
+.intro-text {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;             /* Удобное чтение */
+    margin-bottom: 40px;           /* Отступ до формы */
+}
+
+/* Группа полей формы */
+.form-group {
+    margin-bottom: 20px;           /* Отступ между группами */
+    text-align: left;              /* Выравнивание по левому краю */
+    max-width: 600px;             /* Ограничение ширины */
+    margin: 0 auto;               /* Центровка по горизонтали */
+}
+
+/* Метки полей */
+label {
+    display: block;                /* Блочный элемент */
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Поля ввода */
+input[type="text"],
+textarea {
+    width: 100%;                  /* Занимает всю ширину */
+    padding: 10px;                /* Внутренние отступы */
+    border: 1px solid #ccc;     /* Рамка */
+    border-radius: 4px;           /* Скругление углов */
+    font-size: 16px;
+    margin-bottom: 20px;          /* Отступ до следующего элемента */
+}
+
+/* Радио-кнопки и чекбоксы */
+.radio-group label,
+.checkbox-group label {
+    display: block;                /* Блочный элемент */
+    margin-bottom: 20px;          /* Отступ между кнопками */
+}
+
+/* Кнопка отправки */
+.submit-button {
+    display: block;                /* Блочный элемент */
+    margin: 0 auto;               /* Центровка по горизонтали */
+    padding: 10px 20px;          /* Внутренние отступы */
+    background-color: #333;       /* Цвет кнопки */
+    color: white;                  /* Цвет текста */
+    border: none;                 /* Без рамки */
+    border-radius: 4px;           /* Скругление углов */
+    font-size: 18px;
+    cursor: pointer;              /* Курсор руки */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+/* Эффект при наведении */
+.submit-button:hover {
+    background-color: #555;       /* Более тёмный оттенок */
+}
+
+/* Скрываем стандартные элементы */
+input[type="radio"], input[type="checkbox"] {
+    appearance: none; /* Убираем стандартное оформление */
+    opacity: 0; /* Делаем невидимым */
+    position: absolute; /* Позиционирование */
+    margin: 0; /* Обнуляем отступы */
+    cursor: pointer; /* Курсор руки */
+}
+
+/* Обёртка для стилизованных элементов */
+.label-wrapper {
+    display: inline-flex; /* Гибкость */
+    align-items: center; /* Вертикальное выравнивание */
+    cursor: pointer; /* Курсор руки */
+    user-select: none; /* Запрещаем выделение */
+}
+
+/* Стилизация радио-кнопок */
+.custom-radio {
+    display: inline-block; /* Инлайн-блок */
+    width: 20px; /* Диаметр круга */
+    height: 20px; /* Диаметр круга */
+    border-radius: 50%; /* Круглая форма */
+    border: 2px solid #333; /* Рамка */
+    margin-right: 10px; /* Отступ справа */
+    transition: background-color 0.3s ease; /* Плавный переход */
+    pointer-events: none; /* Не перехватываем клики */
+}
+
+/* Активное состояние радио-кнопки */
+.radio-group input:checked ~ .custom-radio {
+    background-color: #ccc; /* Цвет заливки */
+}
+
+/* Стилизация чекбоксов */
+.custom-checkbox {
+    display: inline-block; /* Инлайн-блок */
+    width: 20px; /* Размер квадрата */
+    height: 20px; /* Размер квадрата */
+    border: 2px solid #333; /* Рамка */
+    margin-right: 10px; /* Отступ справа */
+    transition: background-color 0.3s ease; /* Плавный переход */
+    pointer-events: none; /* Не перехватываем клики */
+}
+
+/* Активное состояние чекбокса */
+.checkbox-group input:checked ~ .custom-checkbox {
+    background-color: #ccc; /* Цвет заливки */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11l6 6 10-12"/></svg>');
+    background-position: center; /* Позиция иконки */
+    background-repeat: no-repeat; /* Однократное отображение */
+    background-size: 50%; /* Размер иконки */
+}
+
+/* Общий стиль для блока 11 */
+.block11 {
+    position: relative;     
+              
+    display: flex;         
+    justify-content: center;
+    align-items: center;   
+    overflow: hidden; 
+    
+}
+
+/* Фотография */
+.final-image {
+    width: 50%;           
+    height: 100%;  
+    height: auto;                 /* Сохраняем пропорции */
+    display: block;                /* Блоковый элемент */
+    margin: 0 auto;               /* Центровка по горизонтали */
+    position: relative;           /* Позиционирование */
+    
+}
+
+/* Текст поверх фотографии */
+.overlay-text1 {
+    position: absolute;            /* Абсолютное позиционирование */
+    top: 0;                       /* Привязка к верхней части */
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка по горизонтали */
+    text-align: center;           /* Центровка текста */
+    color: white;                  /* Белые буквы */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Тень для читаемости */
+    padding-top: 150px;
+}
+
+/* Сообщение "Будем рады видеть вас!" */
+.welcome-message1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Имена (вертикальное расположение) */
+.names-vertical {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    letter-spacing: 2px;
+    line-height: 1.2;             /* Промежутки между строками */
+}
