@@ -818,19 +818,15 @@ input[type="radio"], input[type="checkbox"] {
         width: auto;
     }
 
-    .names-vertical{
-        line-height: 1;
-    }
-
     /* Уменьшенные размеры текста */
     .first-name,
     .middle-word,
     .last-name {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .invitation-text, .welcome-message1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .right-section{
