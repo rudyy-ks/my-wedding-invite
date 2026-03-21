@@ -738,7 +738,8 @@ input[type="radio"], input[type="checkbox"] {
 
 /* Сообщение "Будем рады видеть вас!" */
 .welcome-message1 {
-    margin-bottom: 40px;
+
+    margin: 80px 0;
 }
 
 /* Имена (вертикальное расположение) */
@@ -826,7 +827,7 @@ input[type="radio"], input[type="checkbox"] {
     }
 
     .invitation-text, .welcome-message1 {
-        font-size: 40px;
+        font-size: 48px;
     }
 
     .right-section{
