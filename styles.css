@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 /* Общие настройки */
 * {
     box-sizing: border-box;
@@ -11,6 +12,12 @@
 body {
     background-color: #fafafa; 
     font-family: 'Playfair Display', serif;
+}
+
+h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    font-size: 56px;
 }
 
 /* Основной блок с фотографией и текстом */
@@ -37,9 +44,11 @@ body {
 .first-name,
 .middle-word,
 .last-name {
+    font-family: "Great Vibes", cursive;
+    font-weight: bold;
     display: block;
     text-align: center;
-    font-size: 56px;
+    font-size: 80px;
     color: white;
     letter-spacing: 2px;
     text-shadow: 2px 2px 3px black;
@@ -67,13 +76,14 @@ body {
 
 /* Текст приглашения */
 .invitation-text {
+    font-family: "Great Vibes", cursive;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 56px;
     color: white;
     text-transform: none;   
     letter-spacing: 2px;
     position: absolute;     
-    bottom: 100px;              
+    bottom: 80px;              
     line-height: 1.2;
     white-space: pre-wrap;  
     text-shadow: 2px 2px 3px black;
@@ -87,6 +97,7 @@ body {
 
 /* Заголовки верхнего уровня */
 .uppercase-title {
+    
     font-weight: 500;                       /* Умеренная толщина, близко к оригиналу */
     font-size: 56px;
     letter-spacing: 2px;
@@ -163,7 +174,6 @@ body {
 
 /* Заголовки левой секции */
 .left-section h2 {
-    font-size: 36px;
     color: #333;
     margin-bottom: 10px;
 }
@@ -189,7 +199,7 @@ body {
 
 .section-image {
     max-width: 100%;             /* Пропорциональное масштабирование */
-    height: 500px;                /* Сохраняем пропорции */
+    height: auto;                /* Сохраняем пропорции */
     vertical-align: middle;       /* Вертикальное выравнивание */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Добавлена легкая тень */
 }
@@ -259,7 +269,6 @@ body {
 
 /* Заголовок правой секции */
 .block4 .right-section h2 {
-    font-size: 36px;
     color: #333;
     margin-bottom: 10px;
 }
@@ -307,7 +316,6 @@ body {
 
 /* Заголовок программы */
 .program-header {
-    font-size: 24px;
     color: #333;
     margin-bottom: 10px;
 }
@@ -390,7 +398,6 @@ body {
 
 /* Заголовок блока */
 .dress-code-header {
-    font-size: 36px;
     color: #333;
     margin-bottom: 20px;
 }
@@ -412,7 +419,6 @@ body {
 
 /* Заголовок блока */
 .gift-header {
-    font-size: 36px;
     color: #333;
     margin-bottom: 20px;
 }
@@ -500,7 +506,6 @@ body {
 
 /* Заголовок блока */
 .countdown-header {
-    font-size: 36px;
     color: #333;
     margin-bottom: 40px;
 }
@@ -513,7 +518,7 @@ body {
 
 /* Фотография */
 .countdown-image {
-    max-width: 70%;              /* Пропорциональное масштабирование */
+    max-width: 40%;              /* Пропорциональное масштабирование */
     height: auto;                 /* Сохраняем пропорции */
     display: block;                /* Блоковый элемент */
     margin: 0 auto;               /* Центровка по горизонтали */
@@ -529,11 +534,10 @@ body {
     display: flex;                 /* Гибкость */
     justify-content: center;      /* Центровка по горизонтали */
     gap: 20px;                    /* Промежутки между элементами */
-    padding: 10px 20px;          /* Внутренние отступы */
+    padding: 35px 20px;          /* Внутренние отступы */
     border-radius: 8px;           /* Скругление углов */
     font-size: 18px;              /* Размер шрифта */
-    color: white;
-    text-shadow: 2px 2px 3px black;
+    color: rgb(60, 142, 197);
 }
 
 /* Отдельный элемент таймера */
@@ -543,7 +547,7 @@ body {
 
 /* Цифры таймера (увеличенный шрифт) */
 .timer-item span {
-    font-size: 55px;              /* Большие цифры */
+    font-size: 45px;              /* Большие цифры */
     font-weight: bold;            /* Жирный шрифт */
     display: block;                /* Блочный элемент */
 }
@@ -577,7 +581,6 @@ body {
 
 /* Заголовок блока */
 .guest-form-header {
-    font-size: 36px;
     color: #333;
     margin-bottom: 40px;
 }
@@ -705,6 +708,7 @@ input[type="radio"], input[type="checkbox"] {
     justify-content: center;
     align-items: center;   
     overflow: hidden; 
+    margin-bottom: 50px;
     
 }
 
@@ -716,6 +720,7 @@ input[type="radio"], input[type="checkbox"] {
     display: block;                /* Блоковый элемент */
     margin: 0 auto;               /* Центровка по горизонтали */
     position: relative;           /* Позиционирование */
+    margin-bottom: 50px;
     
 }
 
@@ -728,13 +733,12 @@ input[type="radio"], input[type="checkbox"] {
     text-align: center;           /* Центровка текста */
     color: white;                  /* Белые буквы */
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Тень для читаемости */
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 /* Сообщение "Будем рады видеть вас!" */
 .welcome-message1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 /* Имена (вертикальное расположение) */
@@ -743,4 +747,160 @@ input[type="radio"], input[type="checkbox"] {
     font-size: 56px;
     letter-spacing: 2px;
     line-height: 1.2;             /* Промежутки между строками */
+}
+
+/* Нижняя декоративная линия */
+.block11::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);   /* Центровка линии */
+    width: 80%;                   /* Линия короче ширины экрана */
+    height: 1px;                  /* Толщина линии */
+    background-color: #ccc;       /* Светлый серый цвет */
+}
+
+@media (max-width: 768px) {
+
+    /* Блоки с контентом */
+    .block2, .block10{
+        padding: 20px;
+    }
+
+    /* Фотографии */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Карта */
+    iframe {
+        height: 300px;
+    }
+
+    /* Таймер */
+    .countdown-timer {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    /* Форма */
+    .form-group {
+        max-width: 100%;
+    }
+
+    /* Кнопка */
+    .submit-button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .top-container {
+        flex-direction: column; /* Вертикальное расположение */
+    }
+
+    /* Весь блок на всю ширину и высоту экрана */
+    .block1, .block11 {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Фотография покрывает весь блок */
+    .center-image {
+        object-fit: cover; 
+        width: 100%;
+        height: 80%;
+    }
+
+    /* Текст закреплён к нижней части */
+    .names, .invitation-text {
+        margin-bottom: 40px;
+        width: auto;
+    }
+
+    .names-vertical{
+        line-height: 1;
+    }
+
+    /* Уменьшенные размеры текста */
+    .first-name,
+    .middle-word,
+    .last-name {
+        font-size: 48px;
+    }
+
+    .invitation-text, .welcome-message1 {
+        font-size: 48px;
+    }
+
+    .right-section{
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    .section-image, .gift-image, .countdown-image, .final-image{
+        vertical-align: middle;
+        object-fit: cover; 
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Вертикальное расположение на мобильных */
+    .top-container {
+        flex-direction: column; /* Вертикальное расположение */
+    }
+
+    /* Поменяй порядок элементов на мобильных */
+    .block4 .left-section {
+        order: 2; /* Фотография идёт второй */
+        margin-top: 40px;
+        padding-right: 0;
+    }
+
+    .block4 .right-section {
+        order: 1; /* Текст идёт первым */
+        padding-left: 0;
+    }
+
+    .schedule-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule-item{
+        padding-right: 0;
+        width: 200px;
+    }
+
+    .schedule-item:not(:first-child){
+        margin-top: 20px;
+    }
+
+    .schedule-item:not(:last-child)::after{
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);   /* Центровка линии */
+        width: 100%;                   /* Линия короче ширины экрана */
+        height: 1px;                  /* Толщина линии */
+        background-color: #ccc;       /* Светлый серый цвет */
+    }
+
+    .gift-image, .countdown-image{
+        max-width: 100%;
+    }
+
+    .timer-item span{
+        font-size: 27px;
+    }
+
+    .overlay-text1{
+        padding-top: 50px;
+    }
+
+    .bottom-section{
+        width: 90%;
+        padding-top: 0;
+    }
 }

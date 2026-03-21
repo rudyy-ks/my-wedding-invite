@@ -6,6 +6,7 @@
         <title>Приглашение на свадьбу</title>
         <link rel="stylesheet" href="styles.css">
         <script src="js.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body>
@@ -15,9 +16,9 @@
             <div class="block1">
                 <img src="images/foto1_2.jpg" alt="Фото Кирилла и Элины" class="center-image">
                 <h2 class="names">
-                    <span class="first-name">КИРИЛЛ</span>
+                    <span class="first-name">Кирилл</span>
                     <span class="middle-word">и</span>
-                    <span class="last-name">ЭЛИНА</span>
+                    <span class="last-name">Элина</span>
                 </h2>
                 <p class="invitation-text">приглашают на свадьбу</p>
             </div>
@@ -34,7 +35,7 @@
                 <!-- Левая секция (текстовая) -->
                 <div class="left-section">
                     <div class="left-section-text">
-                        <h2>SAVE THE DATE</h2>
+                        <h2>Наша дата</h2>
                         <h3>20 июня 2026 года</h3>
                         <p>Чудесный день,<br>когда мы станем семьей.</p>
                     </div>
@@ -62,7 +63,7 @@
                 
                 <!-- Правая секция (текстовая) -->
                 <div class="right-section">
-                    <h2>LOCATION</h2>
+                    <h2>Место проведения</h2>
                     <p>Будем ждать вас по адресу:<br>
                     г. Оренбург,<br>
                     Банкет-холл «Ажур»<br>
@@ -79,8 +80,7 @@
         </div>
         
         <div class="block5">
-            <h2 class="program-header">PROGRAM OF THE DAY</h2>
-            <h3 class="program-subheader">ПРОГРАММА ДНЯ</h3>
+            <h2 class="program-header">Программа дня</h2><br>
 
             <div class="schedule-grid">
                 <!-- Временные слоты с иконками и описанием -->
@@ -119,18 +119,17 @@
         </div>
 
         <div class="block6">
-            <h2 class="dress-code-header">DRESS CODE</h2>
-            <p class="dress-code-text">Никакого DRESS CODE</p>
+            <h2 class="dress-code-header">Дресс код</h2>
+            <p class="dress-code-text">Никакого ДРЕСС КОДА</p>
         </div>
 
         <div class="block7">
             <!-- Заголовок блока -->
-            <h2 class="gift-header">ДОРОГИЕ ГОСТИ!</h2>
+            <h2 class="gift-header">Дорогие гости!</h2>
 
             <!-- Основное описание -->
             <p class="gift-description">
-                По желанию, вы можете заменить подарочный букет цветов на бутылку вашего любимого напитка с этикеткой, где будут <br>
-                написаны ваши пожелания и день, когда нам открыть его.
+                Мы будем рады, если вместо традиционного букета<br> вы подарите бутылку вашего любимого напитка с оригинальной этикеткой,<br> где напишите тёплые пожелания и дату, когда нам стоит её открыть.  
             </p>
 
             <!-- Фотография -->
@@ -138,8 +137,9 @@
 
             <!-- Дополнительный текст -->
             <p class="gift-conclusion">
-                Мы с нетерпением будем ждать момента, когда сможем насладиться вашим подарком и вспомнить ваши добрые пожелания!
+                <br>Мы с нетерпением будем ждать момента, когда сможем насладиться вашим подарком и вспомнить ваши добрые пожелания!
             </p>
+            
         </div>
 
         <div class="block8">
@@ -152,7 +152,7 @@
 
             <!-- Центральный текст -->
             <div class="message">
-                <p>От всего сердца просим воздержаться от криков <br>"Горько!" <br>и сохранить атмосферу уютного семейного таинства.</p>
+                <p>От всего сердца просим воздержаться от криков: "Горько!" <br>и сохранить атмосферу уютного семейного таинства.</p>
             </div>
 
             <!-- Орнамент снизу -->
@@ -183,11 +183,11 @@
                     </div>
                     <div class="timer-item">
                         <span id="minutes">00</span>
-                        <small>минут</small>
+                        <small>мин</small>
                     </div>
                     <div class="timer-item">
                         <span id="seconds">00</span>
-                        <small>секунд</small>
+                        <small>сек</small>
                     </div>
                 </div>
             </div>
@@ -201,8 +201,8 @@
             <form id="guest-form" action="https://formspree.io/f/xaqpdlgg" method="POST">
                 <!-- Введение -->
                 <p class="intro-text">
-                    Пожалуйста, подтвердите свое присутствие <br>
-                    до 09.06.2026 <br>
+                    Пожалуйста, подтвердите свое присутствие 
+                    до <b>05.06.2026</b> <br>
                     Ваши ответы на вопросы очень помогут нам при организации свадьбы.
                 </p>
 
@@ -214,7 +214,7 @@
 
                 <!-- Подтверждение присутствия -->
                 <div class="form-group">
-                    <label>Подтвердите своё присутствие:</label>
+                    <label>Подтвердите своё присутствие:</label><br>
                     <div class="radio-group">
                         <label class="label-wrapper">
                             <input type="radio" name="attendance" value="yes" required>
@@ -230,7 +230,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Предпочитаемые напитки:</label>
+                    <label>Предпочитаемые напитки:</label><br>
                     <div class="checkbox-group">
                         <label class="label-wrapper">
                             <input type="checkbox" name="drinks[]" value="Champagne">
@@ -251,6 +251,11 @@
                             <input type="checkbox" name="drinks[]" value="Vodka">
                             <span class="custom-checkbox"></span> <!-- Добавили пустой span -->
                             Водка
+                        </label>
+                        <label class="label-wrapper">
+                            <input type="checkbox" name="drinks[]" value="Viski">
+                            <span class="custom-checkbox"></span> <!-- Добавили пустой span -->
+                            Виски
                         </label>
                     </div>
                 </div>
@@ -274,12 +279,10 @@
                 <div class="overlay-text1">
                     <h2 class="welcome-message1">Будем рады видеть вас!</h2>
                     <h2 class="names-vertical">
-                        <span class="first-name">КИРИЛЛ</span>
+                        <span class="first-name">Кирилл</span>
                         <span class="middle-word">и</span>
-                        <span class="last-name">ЭЛИНА</span>
+                        <span class="last-name">Элина</span>
                     </h2>
-                    
-                    
                 </div>
         </div>
 
