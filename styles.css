@@ -903,4 +903,17 @@ input[type="radio"], input[type="checkbox"] {
         width: 90%;
         padding-top: 0;
     }
+    .gift{
+        display: flex;
+        text-align: center;
+        width: 100%;
+    }
+    .gift-description, .gift-conclusion{
+        padding: 0 10px;
+    }
+
+    .message{
+        width: 100%;
+        padding: 0 15px;
+    }
 }
