@@ -30,3 +30,41 @@ function updateCountdown() {
     document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0') + ' :';;
     document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('guest-form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Предотвращаем обычную отправку
+
+        // Получаем текст из поля пожеланий
+        const wishesText = document.getElementById('wishes').value;
+
+        // Разбиваем длинные строки на короткие (максимум 70 символов)
+        const formattedWishes = wishesText.replace(/\n/g, '<br>'); // Замена переносов на <br>
+        const lines = formattedWishes.split('<br>'); // Разбиваем на строки
+        const wrappedLines = [];
+
+        lines.forEach(line => {
+            while (line.length > 70) {
+                const index = line.substring(0, 70).lastIndexOf(' ');
+                wrappedLines.push(line.substring(0, index));
+                line = line.substring(index + 1);
+            }
+            wrappedLines.push(line);
+        });
+
+        // Объединяем строки с переносами
+        const finalWishes = wrappedLines.join('<br>');
+
+        // Создаем скрытое поле для отправки обработанного текста
+        const hiddenField = document.createElement('input');
+        hiddenField.type = 'hidden';
+        hiddenField.name = 'formatted_wishes'; // Новое поле
+        hiddenField.value = finalWishes;
+        form.appendChild(hiddenField);
+
+        // Отправляем форму
+        form.submit();
+    });
+});
