@@ -22,7 +22,7 @@ h2{
 
 /* Основной блок с фотографией и текстом */
 .block1 {
-    background-color: #a7dbf0;
+    background-color: #30333C;
     position: relative;     
              
     display: flex;         
@@ -34,7 +34,7 @@ h2{
 /* Центрирование фотографии */
 .center-image {
     object-fit: cover;      
-    width: 50%;           
+    width: 36%;           
     height: 100%;          
     border-radius: 8px;    
     position: relative;  
@@ -714,7 +714,7 @@ input[type="radio"], input[type="checkbox"] {
 
 /* Фотография */
 .final-image {
-    width: 50%;           
+    width: 36%;           
     height: 100%;  
     height: auto;                 /* Сохраняем пропорции */
     display: block;                /* Блоковый элемент */
@@ -727,13 +727,13 @@ input[type="radio"], input[type="checkbox"] {
 /* Текст поверх фотографии */
 .overlay-text1 {
     position: absolute;            /* Абсолютное позиционирование */
-    top: 0;                       /* Привязка к верхней части */
+    bottom: 0;                       /* Привязка к верхней части */
     left: 50%;
     transform: translateX(-50%);   /* Центровка по горизонтали */
     text-align: center;           /* Центровка текста */
     color: white;                  /* Белые буквы */
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5); /* Тень для читаемости */
-    padding-top: 120px;
+    text-shadow: 2px 2px 3px black; /* Тень для читаемости */
+    padding-bottom: 120px;
 }
 
 /* Сообщение "Будем рады видеть вас!" */
